@@ -1,0 +1,146 @@
+<div class="container my-3 div-container">
+    <div class="row align-items-center">
+        <form 
+        [formGroup]="forms"
+        (ngSubmit)="datosFormulario()">
+            <div class="container align-items-center">
+                <div class="container align-items-center">
+                    <div class="div-center">
+                       <h1>Ticket de Turno</h1>
+                    </div>
+                </div>
+                <div class="row align-items-center">
+                    <div class="mb-3 col-md-8 col-sm-12 my-2">
+                        <div class="d-flex align-items-center">
+                            <label for="titular" class="form-label px-1">Nombre del Titular:</label>
+                            <input type="text" class="form-control border-black" name="titular" id="titular" placeholder="Nombre del Titular que realiza el tramite" formControlName="titular"
+                            [ngClass]="{
+                                'is-invalid': forms.get('titular')?.invalid && (forms.get('titular')?.dirty || forms.get('titular')?.touched), 
+                                'is-valid': forms.get('titular')?.valid && (forms.get('titular')?.dirty || forms.get('titular')?.touched)}">
+                        </div>
+                    </div>
+
+                    <div class="mb-3 col-md-4 col-sm-12 my-2">
+                        <div class="d-flex align-items-center">
+                            <label for="curp" class="form-label px-2">CURP:</label>
+                            <input type="text" class="form-control border-black" name="curp" id="curo" placeholder="CURP del alumno" formControlName="curp"
+                            [ngClass]="{
+                                'is-invalid': forms.get('curp')?.invalid && (forms.get('curp')?.dirty || forms.get('curp')?.touched), 
+                                'is-valid': forms.get('curp')?.valid && (forms.get('curp')?.dirty || forms.get('curp')?.touched)}">
+                        </div>
+                    </div>
+
+                    <div class="mb-3 col-md-4 my-2 col-sm-12">
+                        <div class="d-flex align-items-center">
+                            <label for="nombre" class="form-label px-2">Nombre:</label>
+                            <input type="text" class="form-control border-black" name="nombre" id="nombre" placeholder="Nombre del Alumno" formControlName="nombre"
+                            [ngClass]="{
+                                'is-invalid': forms.get('nombre')?.invalid && (forms.get('nombre')?.dirty || forms.get('nombre')?.touched), 
+                                'is-valid': forms.get('nombre')?.valid && (forms.get('nombre')?.dirty || forms.get('nombre')?.touched)}">
+                        </div>
+                    </div>
+
+                    <div class="mb-3 col-md-4 my-2 col-sm-12">
+                        <div class="d-flex align-items-center">
+                            <label for="paterno" class="form-label px-2">Paterno:</label>
+                            <input type="text" class="form-control border-black" name="paterno" id="paterno" placeholder="Apellido Paterno del Alumno" formControlName="paterno"
+                            [ngClass]="{
+                                'is-invalid': forms.get('paterno')?.invalid && (forms.get('paterno')?.dirty || forms.get('paterno')?.touched), 
+                                'is-valid': forms.get('paterno')?.valid && (forms.get('paterno')?.dirty || forms.get('paterno')?.touched)}">
+                        </div>
+                    </div>
+
+                    <div class="mb-3 col-md-4 my-2 col-sm-12">
+                        <div class="d-flex align-items-center">
+                            <label for="materno" class="form-label px-2">Materno:</label>
+                            <input type="text" class="form-control border-black" name="materno" id="materno" placeholder="Apellido Materno del Alumno" formControlName="materno"
+                            [ngClass]="{
+                                'is-invalid': forms.get('materno')?.invalid && (forms.get('materno')?.dirty || forms.get('materno')?.touched), 
+                                'is-valid': forms.get('materno')?.valid && (forms.get('materno')?.dirty || forms.get('materno')?.touched)}">
+                        </div>
+                    </div>
+
+                    <div class="mb-3 col-md-4 my-2 col-sm-12">
+                        <div class="d-flex align-items-center">
+                            <label for="telefono" class="form-label px-2">Telefono:</label>
+                            <input type="text" class="form-control border-black" name="telefono" id="telefono" placeholder="Telefono del titular" formControlName="telefono"
+                            [ngClass]="{
+                                'is-invalid': forms.get('telefono')?.invalid && (forms.get('telefono')?.dirty || forms.get('telefono')?.touched), 
+                                'is-valid': forms.get('telefono')?.valid && (forms.get('telefono')?.dirty || forms.get('telefono')?.touched)}">
+                        </div>
+                    </div>
+
+                    <div class="mb-3 col-md-4 my-2 col-sm-12">
+                        <div class="d-flex align-items-center">
+                            <label for="celular" class="form-label px-2">Celular:</label>
+                            <input type="text" class="form-control border-black" name="celular" id="celular" placeholder="Celular del titular" formControlName="celular"
+                            [ngClass]="{
+                                'is-invalid': forms.get('celular')?.invalid && (forms.get('celular')?.dirty || forms.get('celular')?.touched), 
+                                'is-valid': forms.get('celular')?.valid && (forms.get('celular')?.dirty || forms.get('celular')?.touched)}">
+                        </div>
+                    </div>
+
+                    <div class="mb-3 col-md-4 my-2 col-sm-12">
+                        <div class="d-flex align-items-center">
+                            <label for="correo" class="form-label px-2">Correo:</label>
+                            <input type="text" class="form-control border-black" name="correo" id="correo" placeholder="Correo del titular" formControlName="correo"
+                            [ngClass]="{
+                                'is-invalid': forms.get('correo')?.invalid && (forms.get('correo')?.dirty || forms.get('correo')?.touched), 
+                                'is-valid': forms.get('correo')?.valid && (forms.get('correo')?.dirty || forms.get('correo')?.touched)}">
+                        </div>
+                    </div>
+
+                    <div class="mb-3 col-md-10 col-sm-12">
+                        <div class="d-flex align-items-center">
+                            <label for="nivel" class="form-label px-2">¿Nivel que desea ingresar o que ya cursa el alumno?</label>
+                            <select name="nivel" id="nivel" class="width3" formControlName="nivel" [ngClass]="{
+                                'is-invalid': forms.get('nivel')?.invalid && (forms.get('nivel')?.dirty || forms.get('nivel')?.touched), 
+                                'is-valid':  (forms.get('nivel')?.dirty || forms.get('nivel')?.touched)}">
+                                <option value="">~Seleccione una opcion~</option>
+                                <option value="primero">Primero</option>
+                                <option value="segundo">Segundo</option>
+                                <option value="tercero">Tercero</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="mb-3 col-md-10 col-sm-12">
+                        <div class="d-flex align-items-center">
+                            <label for="municipio" class="form-label px-2">Municipio donde desea estudie el alumno</label>
+                            <select name="municipio" id="municipio" class="width3" formControlName="municipio" [ngClass]="{
+                                'is-invalid': forms.get('municipio')?.invalid && (forms.get('municipio')?.dirty || forms.get('municipio')?.touched), 
+                                'is-valid': forms.get('municipio')?.valid &&(forms.get('municipio')?.dirty || forms.get('municipio')?.touched)}">
+                                <option value="">~Seleccione una opcion~</option>
+                                <option value="municipio1">Saltillo</option>
+                                <option value="municipio2">Arteaga</option>
+                                <option value="municipio3">Ramos Arizpe</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="mb-3 col-md-10 col-sm-12">
+                        <div class="d-flex align-items-center">
+                            <label for="asunto" class="form-label px-2">Seleccione el asunto que va a tratar</label>
+                            <select name="asunto" id="asunto" class="width3" formControlName="asunto" [ngClass]="{
+                                'is-invalid': forms.get('asunto')?.invalid && (forms.get('asunto')?.dirty || forms.get('asunto')?.touched), 
+                                'is-valid': forms.get('asunto')?.valid && (forms.get('asunto')?.dirty || forms.get('asunto')?.touched)}">
+                                <option value="">~Seleccione una opcion~</option>
+                                <option value="asunto 1">Entrega de papeleria</option>
+                                <option value="asunto 2">Junta de padres de familia</option>
+                                <option value="asunto 3">Reporte</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-3 col-sm-12 align-items-center div-center">
+                        <button class="btn btn-primary btn-lg ms-auto mx-3" type="submit">
+                            <strong>Generar Turno</strong>
+                        </button>
+                        <button class="btn btn-primary btn-lg ms-auto boton-cancelar" (click)="cancelar()" type="button">
+                            <strong>Cancelar</strong>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+.boton-cancelar {
+    background-color: #f8d7da; /* Color de fondo rojo claro */
+    color: #721c24; /* Color de texto rojo oscuro */
+    border: 1px solid #f5c6cb; /* Borde rojo claro */
+    border-radius: 5px; /* Esquinas redondeadas */
+    padding: 10px 20px; /* Espaciado interno */
+    transition: background-color 0.3s ease; /* Transición suave al pasar el ratón */
+  }
+  
+  .boton-cancelar:hover {
+    background-color: #f5c6cb; /* Cambia el color de fondo al pasar el ratón */
+  }

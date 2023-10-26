@@ -1,0 +1,28 @@
+
+select {
+    width: 200px; /* Ancho personalizado */
+    height: 40px; /* Altura personalizada */
+    font-size: 18px; /* Tamaño de fuente personalizado */
+}
+
+.width1 {
+    width: 200px;
+}
+
+.width2 {
+ width: 100%;
+}
+.width3 {
+    width: 300px;
+}
+.div-center{
+    text-align: center;
+}
+
+.div-container{
+    background-color: #f0f0f0;
+    border-radius: 10px; /* Radio de las esquinas, haciendo los bordes redondeados */
+    border: 2px solid #000; /* Grosor, estilo y color del borde */
+    padding-top: 50px;
+    padding-bottom: 50px;
+}

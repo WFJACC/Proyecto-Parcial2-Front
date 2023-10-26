@@ -1,0 +1,35 @@
+.mat-mdc-form-field {
+    font-size: 14px;
+    width: 90%;
+    margin-right: 20px;
+  }
+  
+  td,
+  th {
+    width: 10%;
+  }
+  
+  .btnEdit,
+  .btnDelete {
+    cursor: pointer;
+  }
+  
+  
+  .table-container {
+    max-width: 95%;
+    margin: 0 auto; 
+    overflow-x: auto; 
+    margin-top: 20px;
+  }
+  
+  .mat-table {
+    table-layout: fixed;
+    width: 80%;
+    font-size:30%;
+  }
+
+  .botonAgregar {
+    max-width: 200px; /* Establece el ancho máximo según tus necesidades */
+    width: 80%; /* Hace que el botón ocupe el 100% del ancho máximo permitido */
+    margin-top: -15px;
+  }
